@@ -1,0 +1,47 @@
+   <!--  EJERCICIO, 
+
+            PRIMERA PARTE
+
+    Crear en un div una ventana de logueo, que con dos elementos de entrada (input) reciba las 
+    variables de usuario y contraseña (debe ser solo numerica), ambos deben ser necesarios en logueo para sacar como resultado
+    un mensaje que inicialmente sea un alert, pero que posteriormente sea un mensaje de salida en un segundo
+    div que se encuentre al lado. El mensaje no tiene porque tener,
+    Hay que parsear a enteros el valor de la clave. Hay que controlar que el nombre pueda ser en mayusculas
+    o minusculas
+    Las datos que se guardan en el logueo tambien pueden ser variables
+
+            SEGUNDA PARTE
+
+    Crear un boton (checkbox) que cambie el estado del atributo de type del password para que cambien de text a
+    password y permita ver el contenido de la clave
+    Se puede hacer con un check que mida el estado de estar chequeado o no y una condicional para coloque un diferente
+    atributo type, en cada valor de chequeado
+    Se puede colocar la imagen de ojo, que ademas cambie la ruta a un ojo ciego y a un ojo abierto,
+    cambiando la ruta del src.
+
+
+
+
+       TERCERA PARTE
+
+
+       El boton de logueo  esta inicialmente deshabilitado y que se habilite cuando se hace check en un input type
+       checked (una segunda casilla de verificacion) que esta al lado de un mensaje de  Aceptar condiciones de entrada
+        en el servicio/intranet de la pagina web
+
+
+
+        CUARTA PARTE
+
+
+        El logueo exitoso hace desaparecer el portal de entrada y muestra un div oculto escondido en una clase
+         que tiene  diferentes elementos de apariencia y de saludo
+
+         El logueo fracasado hace desaparecer el portal de entrada y muestra un div oculto escondido en una clase
+         que tiene diferentes elementos de apariencia y de despedida
+        
+        
+        El logueo exitoso contiene un boton de accion que directamente redirecciona a otra pagina (viaje a las islas del indico)
+
+
+        

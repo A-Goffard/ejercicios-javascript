@@ -1,0 +1,19 @@
+     EJERCICIO - CAMBIAR IMAGENES
+
+            PRIMERA PARTE
+            Crear un script que cambie una imagen por otra al pasar el cursor por encima de la imagen, y que vuelva
+            a la imagen inicial al dejar el cursor de estar encima de la imagen
+            - Seleccionar los elementos de DOM, para poder colocar los eventos
+            - Colocar los eventos en el script
+            - Determinar que es lo que hay que modificar en la accion de la funcion (propiedades css, valores de atributos, etc) 
+
+            SEGUNDA PARTE
+            Crear un script que cambie una imagen por otra con un boton que funcione como un interruptor. Al 
+            mismo tiempo sacar en un alert el element que "desata" el evento y el tipo de evento con el objeto "event"
+            - Colocar los eventos en el script
+            - Determinar el aspecto que vamos a medir para evaluar un estado u otro.
+            - Utilizar condicionales para orientar acciones que cambien la imagen
+            - Utilizar el objeto event para recoger informacion del evento
+
+        
+     

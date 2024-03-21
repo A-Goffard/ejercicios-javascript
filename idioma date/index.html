@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#listaDesplegable{
+    margin: 1rem;
+    font-size: xx-large;
+}
+#cajita {
+    margin: 1rem;
+    font-size: xx-large;
+}
+    </style>
+</head>
+<body>
+    <select name="select" id="listaDesplegable">
+        <option value="nada" id="nada">Elige idioma</option>
+        <option value="eu" id="eu">Euskera</option>
+        <option value="es" id="es">Castellano</option>
+        <option value="en" id="en">English</option>
+        <option value="de" id="de">Deutsch</option>
+        <option value="ja" id="ja">日本語</option>
+        <option value="ca" id="ca">Català</option>
+        <option value="ru" id="ru">Русский</option>
+        <option value="ka" id="ka">ქართული</option>
+        <option value="ar" id="ar">العربية</option>
+        <option value="nl" id="nl">Nederlands</option>
+
+    </select>
+    <div id="cajita"></div>
+
+    <script>
+    
+    const cajita = document.getElementById("cajita");
+    const listaDesplegable = document.getElementById("listaDesplegable");
+    const fecha = new Date();
+    const diasEU = ["Igandea", "Astelehena", "Asteartea", "Asteazkena", "Osteguna", "Ostirala", "Larunbata"];
+    const diasES = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+    const diasEN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const diasDE = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+    const diasJA = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+    const diasCA = ["Diumenge", "Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"];
+    const diasRU = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const diasKA = ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"];
+    const diasAR = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+    const diasNL = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"];
+
+
+
+    // Llama a la función al cargar la página para mostrar el día inicialmente
+    dimeldia();
+
+    // Agrega un evento de cambio al select para actualizar el día cuando se selecciona un idioma diferente
+    listaDesplegable.addEventListener('change', dimeldia);
+
+    function dimeldia() {
+
+    let diadelaSemana = fecha.getDay();
+
+    if(listaDesplegable.value === "nada") {
+        cajita.innerHTML = "";
+    } else if(listaDesplegable.value === "eu") {
+        cajita.innerHTML = diasEU[diadelaSemana];
+    } else if(listaDesplegable.value === "es") {
+        cajita.innerHTML = diasES[diadelaSemana];
+    } else if(listaDesplegable.value === "en"){
+        cajita.innerHTML = diasEN[diadelaSemana];
+    } else if(listaDesplegable.value === "de"){
+        cajita.innerHTML = diasDE[diadelaSemana];
+    } else if(listaDesplegable.value === "ja"){
+        cajita.innerHTML = diasJA[diadelaSemana];
+    } else if(listaDesplegable.value === "ca"){
+        cajita.innerHTML = diasCA[diadelaSemana];
+    } else if(listaDesplegable.value === "ru"){
+        cajita.innerHTML = diasRU[diadelaSemana];
+    } else if(listaDesplegable.value === "ka"){
+        cajita.innerHTML = diasKA[diadelaSemana];
+    } else if(listaDesplegable.value === "ar"){
+        cajita.innerHTML = diasAR[dLunesiadelaSemana];
+    } else if(listaDesplegable.value === "nl"){
+        cajita.innerHTML = diasNL[diadelaSemana];
+    }
+}
+
+
+
+
+    </script>
+</body>
+</html>

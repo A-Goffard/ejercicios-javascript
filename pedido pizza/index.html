@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+button {
+    font-size: xx-large;
+    background-color: rgb(244, 243, 184);
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.5rem;
+    transition: 200ms ease;
+
+}
+button:hover {
+    background-color: rgb(243, 241, 157);
+}
+
+.green {
+    background-color: green;
+    color: white;
+    transition: 200ms ease;
+}
+.green:hover {
+    background-color: rgb(11, 150, 11);
+    color: white;
+}
+#mensaje {
+    font-size: xx-large;
+    color: rgb(218, 142, 36);
+    margin: 0rem 1.5rem;
+}
+img {
+    border-radius: 1.3rem;
+    margin: 1.5rem;
+}
+#pedido {
+    font-size: xx-large;
+    background-color: rgb(244, 225, 184);
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.5rem;
+    transition: 200ms ease;
+}
+#pedido:hover {
+    background-color: rgb(242, 203, 120);;
+}
+    </style>
+</head>
+<body>
+    <section>
+    <div>
+        <img src="/img/pizza.avif" alt="">
+        <div id="mensaje"></div>
+    </div>
+
+        <div class="lista">
+            <button id="pedido">Pedido</button>
+            <button class="ingrediente" id="mozzarella">Mozzarella</button>
+            <button class="ingrediente" id="peperoni">Peperoni</button>
+            <button class="ingrediente" id="jamon">Jamón</button>
+            <button class="ingrediente" id="anchoa">Anchoa</button>
+            <button class="ingrediente" id="pina">Piña</button>
+            <button class="ingrediente" id="tomate">Tomate</button>
+            <button class="ingrediente" id="aceituna">Aceituna</button>
+            <button class="ingrediente" id="champinones">Champiñones</button>
+            <button class="ingrediente" id="pimiento">Pimiento verde</button>
+            <button class="ingrediente" id="cebolla">Cebolla</button>
+        </div>
+    </section>
+<script>
+
+const pedido = document.getElementById("pedido");
+
+const ingrediente = document.querySelectorAll(".ingrediente");
+
+
+/* esto nos cambia el color del boton al clicar */
+
+const ingredientesSeleccionados = [];
+
+
+ingrediente.forEach(boton => {
+        boton.addEventListener('click', function() {
+            seleccionarIngrediente(this);
+        });
+    });
+
+    let ingredientes = [];
+
+function seleccionarIngrediente(boton) {
+
+
+    boton.classList.toggle('green');
+
+    let ingredienteSeleccionado = boton.textContent; 
+
+    if (boton.classList.contains('green')) {
+        ingredientes.push(ingredienteSeleccionado);
+    } else {
+        let index = ingredientes.indexOf(ingredienteSeleccionado);
+        if (index !== -1) {
+            ingredientes.splice(index, 1);
+        }
+
+    }
+    console.log(ingredientes);
+};
+
+    pedido.addEventListener("click", respuesta);
+
+    function respuesta() {
+        if (ingredientes.length > 0) {
+            let mensaje = "La pizza que has elegido lleva ";
+            if (ingredientes.length === 1) {
+                mensaje += ingredientes[0];
+            } else {
+                mensaje += ingredientes.slice(0, -1).join(", ") + " y " + ingredientes[ingredientes.length - 1];
+            }
+            document.getElementById("mensaje").textContent = mensaje;
+        } else {
+            document.getElementById("mensaje").textContent = "Debes seleccionar al menos un ingrediente";
+        }
+    }
+
+</script>
+</body>
+</html>

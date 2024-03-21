@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar fotos</title>
+</head>
+<body>
+    <img id="imagen" src="/lekumberri-navarra.jpg" alt="">
+    <button id="boton">
+        Cambiar
+    </button>
+<script>
+
+  imagen.addEventListener("mouseover", aldatuR);
+  imagen.addEventListener("mouseout", aldatuR);
+
+  let fotoMostrada = "Lekumberri";
+
+  function aldatuR() {
+
+  let imagen = document.getElementById("imagen");
+
+  if(fotoMostrada === "Lekumberri"){
+    imagen.src = "/ujue-navarra.jpg";
+    fotoMostrada = "Ujue";
+  }
+  else{
+    imagen.src = "/lekumberri-navarra.jpg";
+    fotoMostrada = "Lekumberri";
+  }
+
+}
+
+
+let boton = document.getElementById("boton");
+
+boton.addEventListener("click", () => alert(event.target.nodeName + " " + event.type) + aldatuR());
+
+
+
+</script>
+
+
+</body>
+</html>

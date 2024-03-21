@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <article class="general-container">
+        <div>
+            <span> Nombre </span><input type="text" id="nombre" placeholder=" Nombre de usuario">
+        </div>
+        <div>
+            <span> Contraseña </span><input type="password" id="password" placeholder=" Contraseña">
+
+        </div>
+        <button class="boton-ver" id="botonVer"><i class="fa-solid fa-eye-slash" id="ojoCerrado"></i><i class="fa-solid fa-eye" id="ojoAbierto"></i></button>
+
+<!--         <button id="comprobar">Loging</button> -->
+        <div>
+<!--             <span> Ver contraseña </span>  -->
+            
+        </div>
+        <div>
+            <p id="texto_explicativo1" class="texto">Inserta tus datos y acepta</p>
+            <p id="texto_explicativo2" class="desaparecido texto verde">Logueo exitoso</p>
+            <p id="texto_explicativo3" class="desaparecido texto rojo">Los datos introducidos son incorrectos</p>
+
+        </div>
+
+        <div>
+            <input class="botoncillo" type="checkbox" name="checkbox" id="checkButton"><span>  Acepto la <a href="#">política de privacidad</a></span>
+        </div>
+        <button id="botonEnviar" class="desactivado">Enviar</button>
+
+    </article>
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.general-container{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background-color: rgb(228, 255, 255);
+}
+.boton-ver{
+    position: relative;
+    top: -0.3rem;
+    width: 1.7rem;
+    height: 1.5rem;
+}
+.visible{
+    position: absolute;
+    top: 0.25rem;
+    left: 0.2rem;
+/*     display: inline; */
+}
+.oculto{
+    position: absolute;
+    top: 0.25rem;
+    left: 0.2rem;
+    border: solid;
+/*     display: none; */
+    opacity: 0;
+} 
+
+.desaparecido {
+    display: none;
+}
+
+.verde {
+    background-color: rgb(216, 254, 161);
+}
+.texto{
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+.rojo {
+    background-color: rgb(249, 206, 152);
+}

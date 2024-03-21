@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 234, 237);
+            list-style: none;
+        }
+
+        input {
+            background-color: rgb(247, 203, 242);
+            border: solid 0.2rem palevioletred;
+            font-size: xx-large;
+            border-radius: 0.5rem;
+            width: 5rem;
+            margin: 0.5rem;
+        }
+        button {
+            background-color: rgb(229, 106, 147);
+            border: solid 0.2rem rgb(149, 18, 134);
+            font-size: xx-large;
+            border-radius: 0.5rem;
+            padding: 0.3rem 1rem;
+            color: white;
+        }
+        button:hover {
+            background-color: rgb(229, 150, 177);
+            border: solid 0.2rem rgb(210, 58, 192);
+            font-size: xx-large;
+            border-radius: 0.5rem;
+            padding: 0.3rem 1rem;
+            color: rgb(80, 16, 74);
+            box-shadow: 0rem 0rem 1rem 0.3rem white;
+        }
+        div {
+            font-size: xx-large;
+            color: rgb(89, 17, 77);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        article {
+            display: flex;
+            flex-direction: row;
+        }
+        section {
+            display: block;
+            margin: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <input type="number" id="1">
+            <input type="number" id="2">
+            <button id="boton">Resultado</button>
+        </article>
+        <article>
+            <div id="cajita"></div>
+        </article>
+    </section>
+
+    <script>
+
+
+/*             let caja = document.getElementById("cajita");
+            let resultado = document.getElementById("boton");
+
+
+            resultado.addEventListener("click", function(){
+            let variable1 = parseInt(document.getElementById("1").value);
+            let variable2 = parseInt(document.getElementById("2").value);
+                if (variable1 >= variable2) {
+                caja.innerHTML = "No te las flipes, mejor cambias el orden...";
+            } else {
+                let listaNumeros = "";
+
+                for(let i = variable1; i <= variable2; i++){
+
+                    listaNumeros += i + "<br>";
+                }
+                caja.innerHTML = listaNumeros;
+            }
+            }); */
+
+/* ---------------------------------números impares-------------------------------------- */
+        
+/*             let caja = document.getElementById("cajita");
+            let resultado = document.getElementById("boton");
+
+
+            resultado.addEventListener("click", function(){
+            let variable1 = parseInt(document.getElementById("1").value);
+            let variable2 = parseInt(document.getElementById("2").value);
+                if (variable1 >= variable2) {
+                caja.innerHTML = "No te las flipes, mejor cambias el orden...";
+            } else {
+                let listaNumeros = "";
+
+                for(let i = variable1; i <= variable2; i++){
+                    if( i % 2 == 1){
+                        listaNumeros += i + "<br>";
+                        caja.innerHTML = listaNumeros;
+                    }
+
+                }
+                
+            }
+            }); */
+
+            /* ---------------------------------números pares-------------------------------------- */
+        
+/*             let caja = document.getElementById("cajita");
+            let resultado = document.getElementById("boton");
+
+
+            resultado.addEventListener("click", function(){
+            let variable1 = parseInt(document.getElementById("1").value);
+            let variable2 = parseInt(document.getElementById("2").value);
+                if (variable1 >= variable2) {
+                caja.innerHTML = "No te las flipes, mejor cambias el orden...";
+            } else {
+                let listaNumeros = "";
+
+                for(let i = variable1; i <= variable2; i++){
+                    if( i % 2 == 0){
+                        listaNumeros += i + "<br>";
+                        caja.innerHTML = listaNumeros;
+                    }
+
+                }
+                
+            }
+            }); */
+
+            /* ---------------------------------otra manera-------------------------------------- */
+        
+            const caja = document.getElementById("cajita");//al poner consts fuera y lets dentro de la función, podemos reusar las variables de fuera para cualquier función que surja en códigos más largos
+            const resultado = document.getElementById("boton");
+            const numero1 = document.getElementById("1");
+            const numero2 = document.getElementById("2");
+
+
+            boton.addEventListener("click", () => {
+            let variable1 = numero1.value;
+            let variable2 = numero2.value;
+
+                variable1 = parseInt(variable1);//valores casteados. Pasados a int de string y reescrito la variable
+                variable2 = parseInt(variable2);//las buenas prácticas dicen que deberíamos llamar a este nuevo valor con otro nombre
+
+
+                if (variable1 >= variable2) {
+                caja.innerHTML = "No te las flipes, mejor cambias el orden...";
+            } else {
+                let listaNumeros = "<ul>";//generamos una lista desordenada vacía
+
+                for(let i = variable1; i <= variable2; i++){
+                    if( i % 2 != 0){
+                        listaNumeros += "<li>" + i + "</li>";
+                        
+                    }
+                    caja.innerHTML = listaNumeros;
+                }
+                
+            }
+            });
+
+
+    </script>
+</body>
+</html>

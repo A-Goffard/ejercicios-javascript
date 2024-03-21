@@ -1,0 +1,29 @@
+
+
+    TAREA 1
+
+Del siguiente texto "Las Olimpiadas de Munich fueron en su momento las mas innovadoras. Munich  creo las mejores instalaciones deportivas de la epoca. En Munich se reunieron deportistas de mas de 125 naciones"
+
+
+Crea una funcion para cambiar Munich por Roma
+
+    TAREA 2
+
+        PARTE 1
+Del siguiente texto "Cuando Fernando Séptimo Usaba paletón Cuando Fernando Séptimo Usaba paletón Cuando Fernando Séptimo Usaba paletó, paletón"Se
+Crea un script que permita sustituir las vocales por la a,e,i,o,u.. eligiendo entre un panel de vocales y ejecutando el cambio de TODAS las vocales por la vocal elegida.
+Se puede repetir codigo o...crear un script que llame a las vocales contenidas en un array
+
+
+        
+        PARTE 2
+Proponer al usuario la introduccion de su texto personal para hacer el mismo juego
+Controlar que ese texto/cadena, no entre como cadena vacia o tenga mas de 300 caracteres
+
+  HERRAMIENTAS
+
+Hay diferentes metodos y funciones para llevar a cabo esta tarea:
+- Recoger objetos del DOM
+- Utilizar funciones de cadena y array: replace(), split(), join(), replaceAll()
+- Bucles para recorres listas de elementos: for, foreach
+- Expresiones regulares para poder sustituir los parametros de busqueda en toda una cadena de elementos

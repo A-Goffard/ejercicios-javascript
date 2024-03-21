@@ -1,0 +1,25 @@
+ EJERCICIO -  MOSTRAR NUMEROS IMPARES
+
+
+            PRIMERA PARTE
+            Crear un script que muestre una lista de numeros (consecutivos) entre dos valores inicial y final
+            que se suministran a traves de unos elementos inputs. Hay un boton que ofrece
+            el resultado. Esta primera parte es un previo de la parte siguiente
+            - Seleccionar elementos del DOM, 
+            - Utilizar una iteracion para realizar el trabajo
+            - El valor de salida (output) se muestra en un elemento de html
+
+
+
+            SEGUNDA PARTE
+            Adaptar el script anterior para mostrar unicamente los numeros impares entre
+            dos numeros suministrados por input
+            - Seleccionar elementos del DOM, 
+            - Utilizar una iteracion para realizar el trabajo
+            - El valor de salida (output) se muestra en un elemento de html
+            - Utilizar una estructura condicional o una funcion filtro para seleccionar
+              el resultado deseado
+
+
+   
+

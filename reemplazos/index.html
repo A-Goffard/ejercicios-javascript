@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <p id="parrafo">Las Olimpiadas de Munich fueron en su momento las más innovadoras. Munich  creo las mejores instalaciones deportivas de la epoca. En Munich se reunieron deportistas de más de 125 naciones</p>
+    </div>
+    <button id="botonM">Cambiar M x R</button>
+
+    <div class="contenedor">
+        <p id="cancion">Cuando Fernando Séptimo Usaba paletón Cuando Fernando Séptimo Usaba paletón Cuando Fernando Séptimo Usaba paletó, paletón</p>
+    </div>
+    <input type="text" id="vocal">
+    <button id="botonV">Cambiar V</button>
+
+    <div class="contenedor">
+        <div>
+            <textarea name="" id="miTexto" cols="30" rows="10"></textarea>
+        </div>
+
+    <input type="text" id="vocalC">
+    <button id="botonC">Cambiar</button>
+    <div class="cajita" id="cajita"></div>
+
+<!--     <div id="cajita"></div> -->
+
+<script>
+const parrafo = document.getElementById("parrafo");
+/* const cajita = document.getElementById("cajita"); */
+const botonM = document.getElementById("botonM");
+
+botonM.addEventListener("click", cambioMR);
+
+function cambioMR () {
+
+    let texto = parrafo.textContent;
+    console.log(texto);
+
+    let nuevoTexto = texto.replace(/Munich/g, 'Roma');
+
+    console.log(nuevoTexto); 
+
+    parrafo.innerHTML = nuevoTexto;
+/*     return nuevoTexto; */
+
+};
+
+const cancion = document.getElementById("cancion");
+const botonV = document.getElementById("botonV");
+const vocal = document.getElementById("vocal");
+
+botonV.addEventListener("click", cambioV);
+
+function cambioV() {
+
+let texto2 = cancion.textContent;
+console.log(texto2);
+
+let vocalElegida = vocal.value;
+console.log(vocalElegida);
+
+let nuevoTexto2 = texto2.replace(/[aeiouáéíóú]/gi, vocalElegida);
+console.log(nuevoTexto2);
+
+cancion.innerHTML = nuevoTexto2;
+
+}
+
+const botonC = document.getElementById("botonC");
+const vocalC = document.getElementById("vocalC");
+const miTexto = document.getElementById("miTexto");
+let cajita = document.getElementById("cajita");
+
+botonC.addEventListener("click", cambioC);
+
+function cambioC() {
+
+    let texto3 = miTexto.value;
+
+
+    let vocalElegidaC = vocalC.value;
+    let nuevoTexto3 = texto3.replace(/[aeiouáéíóú]/gi, vocalElegidaC);
+    console.log(nuevoTexto3);
+    alert(nuevoTexto3);
+
+    cajita.innerText = nuevoTexto3;
+
+} 
+
+</script>
+</body>
+</html>

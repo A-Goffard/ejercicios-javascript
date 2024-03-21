@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img itemid="imagen" src="/lekumberri-navarra.jpg" alt="" id="lekumberri">
+    <button id="btn1">Cambiar</button>
+
+    <script>
+        const imagen = document.getElementById("lekumberri");
+        const boton = document.querySelector("btn1");
+
+        imagen.addEventListener("mouseover", function(){
+            imagen.setAttribute("src", "/ujue-navarra.jpg");
+        });
+
+        imagen.addEventListener("mouseout", function(){
+            imagen.setAttribute("src", "/lekumberri-navarra.jpg");
+        });
+
+
+/*         imagen.addEventListener("mouseout", volver);
+
+        function volver(){
+        imagen.setAttribute("src", "/lekumberri-navarra.jpg");
+        } */
+
+        boton.addEventListener("click", function() {
+            alert(funciona);
+            alert(event.target.nodeName + " " + event.type);
+
+
+        });
+        
+    </script>
+</body>
+</html>
