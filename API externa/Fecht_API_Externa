@@ -1,0 +1,29 @@
+
+
+Mostrar en un archivo de codigo html-css, los resultados de una api que nos envia datos que recojemos con una peticion http, por GET
+De esta API, vamos a recoger los 16 primeros resultados, de los que una vez procesadas las promesas, obtenemos un objeto json
+
+Vamos a localizar los datos correspondientes a el nombre (name.first) y al apellido (name.last) y la imagen de la persona (picture.medium). para componer una ficha renderizable con un bucle que recorre todo el array de  objetos.
+Los mostraremos en una rejilla basica en un layout, como el del ejemplo mostraso
+
+Utilizamos el endpoint (la ruta de la API) de randomuser.me/api
+
+Le colocamos un parametro para filtrar los primeros 16 resultados 
+
+             https://randomuser.me/api/?results=16   
+
+
+Herramientas
+- Metodo Fecht o libreria Axios
+- Promesas (.then) o Async/Await.
+- Bucle de alto nivel para recorrer el array (foreach, map, filter)
+- Metodos de creacion de elementos html, para mostrar los datos en una vista de usuario: createElement, appenchild
+- Css que permita mostrar los datos en un diseño en rejilla
+
+
+
+
+
+
+
+

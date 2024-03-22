@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#contenedorUsuarios{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  border: solid 1px rgb(173, 173, 255);
+  background-color: rgb(241, 253, 254);
+}
+img{
+  width: 95%;
+}
+*{
+  margin: 0rem;
+}
+
+</style>
+<body>
+  <div id="contenedorUsuarios">
+  </div>
+
+<script>
+
+obtenerUsuarios();
+function obtenerUsuarios() {
+    fetch('https://randomuser.me/api/?results=16')
+      .then(respuesta => {
+        if (!respuesta.ok) {
+          throw new Error (`Error de red: ${respuesta.status}`);
+        }
+        return respuesta.json();
+      })
+      .then(array => {
+        const usuarios = array.results;
+        if (!usuarios || !Array.isArray(usuarios)) { 
+          throw new Error("Los datos de usuario no son válidos.");
+        }
+        const contenedorUsuarios = document.querySelector('#contenedorUsuarios');
+        
+        usuarios.forEach(usuario => {
+            const usuarioActual = document.createElement('div');
+            usuarioActual.innerHTML = `     
+                <img src="${usuario.picture.large}" alt="">
+                <h2 class="nombre">${usuario.name.first}</h2>
+                <h2>${usuario.name.last}</h2>`;
+            contenedorUsuarios.appendChild(usuarioActual);
+            console.log(usuarioActual);
+        });
+
+        console.log(usuarios);
+      })
+      .catch(error => {
+        console.error('Error al obtener usuarios:', error);
+      });
+  }
+</script>
+</body>
+</html>
